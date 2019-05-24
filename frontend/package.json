@@ -1,0 +1,10 @@
+{
+  "name": "nihirash-sjs-talk",
+  "version": "0.0.3",
+  "description": "ScalaJS Talk",
+  "main": "lib/frontend-opt.js",
+  "scripts": {
+    "prepublish": "(cd ..; sbt ';clean;show frontend/fullOptJS') && rm -rf ./lib/resources && cp -r ./src/main/resources ./lib && cp ./target/scala-2.12/scalajs-bundler/main/frontend-opt.js ./lib/frontend-opt.js "
+  },
+  "author": "nihirash"
+}

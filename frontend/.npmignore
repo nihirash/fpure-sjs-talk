@@ -1,0 +1,8 @@
+public/
+src/
+target/
+fastopt-loader.js
+frontend-entry.js
+webpack-core.config.js
+webpack-opt.config.js
+webpack-fastopt.config.js
