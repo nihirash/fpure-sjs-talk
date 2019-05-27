@@ -1,5 +1,6 @@
 import React from 'react'
 import AddItem from './todo/addNew'
+import { Component } from 'nihirash-sjs-talk'
 
 class App extends React.Component {
     state = {downloaded: false, data: []}
@@ -31,7 +32,7 @@ class App extends React.Component {
         return <>
             <h1>Todo list</h1>
             <AddItem newItem={(item) => this.pushNew(item)}/>
-            {data.map(r => JSON.stringify(r))}
+            {data.map(r => <Component element={r} upd={(u) => this.pushNew(u)}/>)}
         </>
     }
 }
